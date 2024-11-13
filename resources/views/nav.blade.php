@@ -1,4 +1,4 @@
-<div class="flex justify-evenly">
+<div class="nav-bar flex justify-evenly">
     <h1>Lyrical Filth</h1>
     <nav>
         <ul class="nav">
