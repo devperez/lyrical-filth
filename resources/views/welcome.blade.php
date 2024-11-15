@@ -28,17 +28,17 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img data-link="/vempire" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img class="cover1" data-link="/vempire" />
         </div>
         <div class="swiper-slide">
-            <img data-link="/dusk"="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img class="cover2" data-link="/dusk" />
         </div>
         <div class="swiper-slide">
-            <img data-link="/cruelty" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img class="cover3" data-link="/cruelty" />
         </div>
-        <div class="swiper-slide">
+        {{-- <div class="swiper-slide">
             <img data-link="#" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
+        </div> --}}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>

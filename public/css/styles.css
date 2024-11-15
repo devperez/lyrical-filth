@@ -56,16 +56,36 @@ body {
 
 .nav-bar {
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-    transform: translateY(-100%);
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
-/* État affiché de la barre */
-.nav-bar.visible {
-    transform: translateY(0);
-    opacity: 1;
+.nav-bar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.cover1 {
+    width: auto;
+    height: 100%;
+    background-image: url('../img/vempire.webp');
+    background-size: contain; /* L'image couvre entièrement le conteneur */
+    background-position: center; /* Centre l'image pour éviter un mauvais recadrage */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.cover2 {
+    width: auto;
+    height: 100%;
+    background-image: url('../img/dusk.jpg');
+    background-size: contain; /* L'image couvre entièrement le conteneur */
+    background-position: center; /* Centre l'image pour éviter un mauvais recadrage */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.cover3 {
+    width: auto;
+    height: 100%;
+    background-image: url('../img/cruelty.jpg');
+    background-size: contain; /* L'image couvre entièrement le conteneur */
+    background-position: center; /* Centre l'image pour éviter un mauvais recadrage */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }

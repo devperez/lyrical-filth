@@ -35,54 +35,31 @@ document.querySelectorAll('.swiper-slide img').forEach((img) => {
 });
 
 // Navbar handling
-// document.addEventListener('DOMContentLoaded', function () {
-//     const navBar = document.querySelector('.nav-bar');
-
-//     // Attendre 5 secondes avant de déclencher la disparition
-//     setTimeout(() => {
-//         navBar.classList.add('hidden');
-
-//         // Ajouter la classe `removed` après 2 secondes pour retirer complètement la barre
-//         setTimeout(() => {
-//             navBar.classList.add('removed');
-//         }, 2000); // Correspond à la durée de la transition (2s)
-//     }, 5000);
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navBar = document.querySelector('.nav-bar');
     let timeoutId;
 
     // Masquer la barre après 5 secondes au chargement
     setTimeout(() => {
-        hideNavBar();
-    }, 5000);
+        navBar.classList.add('hidden');
+    }, 3000);
 
-    // Fonction pour afficher la barre
-    function showNavBar() {
-        clearTimeout(timeoutId); // Annule tout délai existant pour éviter des conflits
-        navBar.classList.add('visible');
-    }
-
-    // Fonction pour masquer la barre
-    function hideNavBar() {
-        navBar.classList.remove('visible');
-    }
-
-    // Vérifier si la souris reste dans la zone pour afficher la barre
-    document.addEventListener('mousemove', function(event) {
-        // Si la souris est dans les 150 premiers pixels en haut de la page
-        if (event.clientY <= 150) {
-            // Démarrer le délai pour réafficher la barre
-            timeoutId = setTimeout(showNavBar, 2000);
+    // Réafficher la barre si la souris reste en haut 2 secondes
+    document.addEventListener('mousemove', function (event) {
+        if (event.clientY <= 50) {
+            clearTimeout(timeoutId); // Annule tout délai en cours
+            timeoutId = setTimeout(() => {
+                navBar.classList.remove('hidden');
+            }, 1000); // Afficher après 2 secondes
         } else {
-            // Annuler le délai si la souris quitte la zone
-            clearTimeout(timeoutId);
+            clearTimeout(timeoutId); // Annule si la souris quitte la zone
         }
     });
 
-    // Masquer la barre lorsque la souris la quitte
-    navBar.addEventListener('mouseleave', function() {
-        setTimeout(hideNavBar, 2000); // Masque la barre après 2 secondes si la souris la quitte
+    // Masquer à nouveau lorsque la souris quitte la barre
+    navBar.addEventListener('mouseleave', function () {
+        setTimeout(() => {
+            navBar.classList.add('hidden');
+        }, 1000); // Masque après 2 secondes
     });
 });
