@@ -6,7 +6,7 @@
 }
 
 h1 {
-    font-family: "Vtks", sans-serif;
+    /* font-family: "Vtks", sans-serif; */
     font-size: 30px;
 }
 
@@ -92,28 +92,51 @@ body {
 .lyrics {
     padding-top: 50px;
     padding-left: 25px;
+    padding-bottom: 50px;
 }
 
-#vempire {
+.text {
+    opacity: 1;
+    color: aliceblue;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+}
+
+#vempire .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250%;
     background-image: url('../img/vempire.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.75;
+    filter: blur(10px);
+    opacity: 0.85; /* Transparence pour atténuer l'image */
+    z-index: 0; /* Place l'image en arrière-plan */
 }
 
-#dusk {
-    background-image: url('../img/dusk.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.75;
+/* Conteneur du texte */
+#vempire .lyrics {
+    position: relative; /* Positionnement au-dessus de l'image */
+    z-index: 1; /* Place le texte au-dessus */
+    color: aliceblue;
+    padding: 50px 25px;
+    text-align: center;
 }
 
-#cruelty {
-    background-image: url('../img/cruelty.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.75;
+/* Style du texte */
+#vempire .lyrics h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#vempire .lyrics .text {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+    line-height: 1.8;
 }
