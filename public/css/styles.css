@@ -28,21 +28,20 @@ body {
 .swiper {
     width: 100%;
     height: 100%;
-
-    /*padding-top: 5%;*/
-    /*padding-bottom: 50px;*/
+    background-color: #000;
+    padding-top: 5px;
 }
 
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 100%;
     height: 100%;
 }
 
 .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 47%;
+    margin: auto;
 }
 
 .swiper-slide img {
@@ -88,4 +87,33 @@ body {
     background-size: contain; /* L'image couvre entièrement le conteneur */
     background-position: center; /* Centre l'image pour éviter un mauvais recadrage */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.lyrics {
+    padding-top: 50px;
+    padding-left: 25px;
+}
+
+#vempire {
+    background-image: url('../img/vempire.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+
+#dusk {
+    background-image: url('../img/dusk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+
+#cruelty {
+    background-image: url('../img/cruelty.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.75;
 }

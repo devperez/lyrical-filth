@@ -3,9 +3,9 @@ var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: 1,
     coverflowEffect: {
-        rotate: 50,
+        rotate: 90,
         stretch: 0,
         depth: 100,
         modifier: 1,
@@ -15,10 +15,6 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
     },
 });
 
@@ -39,18 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const navBar = document.querySelector('.nav-bar');
     let timeoutId;
 
-    // Masquer la barre après 5 secondes au chargement
+    // Masquer la barre après 3 secondes au chargement
     setTimeout(() => {
         navBar.classList.add('hidden');
     }, 3000);
 
-    // Réafficher la barre si la souris reste en haut 2 secondes
+    // Réafficher la barre si la souris reste en haut 1 seconde
     document.addEventListener('mousemove', function (event) {
         if (event.clientY <= 50) {
             clearTimeout(timeoutId); // Annule tout délai en cours
             timeoutId = setTimeout(() => {
                 navBar.classList.remove('hidden');
-            }, 1000); // Afficher après 2 secondes
+            }, 1000); // Afficher après 1 seconde
         } else {
             clearTimeout(timeoutId); // Annule si la souris quitte la zone
         }
@@ -60,6 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navBar.addEventListener('mouseleave', function () {
         setTimeout(() => {
             navBar.classList.add('hidden');
-        }, 1000); // Masque après 2 secondes
+        }, 1000); // Masque après 1 seconde
     });
 });
